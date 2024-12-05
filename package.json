@@ -1,0 +1,20 @@
+{
+  "name": "replace-shapes-penpot-plugin",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite build --watch & vite preview",
+    "build": "tsc && vite build",
+    "build:prod": "tsc && vite build --mode production --minify",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@penpot/plugin-styles": "^1.0.0",
+    "@penpot/plugin-types": "^1.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.2",
+    "vite": "^6.0.2"
+  }
+}

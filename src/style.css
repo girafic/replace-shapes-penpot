@@ -1,0 +1,147 @@
+@import "@penpot/plugin-styles/styles.css";
+
+#image-preview {
+  max-height: 100px;
+  max-width: 100%;
+}
+
+#notification-container {
+  position: fixed;
+  bottom: var(--spacing-16);
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 280px;
+  z-index: 1000;
+  text-wrap: nowrap;
+}
+
+.notification {
+  background-color: var(--background-tertiary);
+  color: var(--foreground-primary);
+  border: 1px solid var(--background-quaternary);
+  border-radius: var(--spacing-8);
+  padding: var(--spacing-12) var(--spacing-16);
+  margin-bottom: var(--spacing-8);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s, transform 0.3s;
+  font-size: var(--font-size-s);
+  line-height: var(--font-line-height-m);
+}
+
+.notification.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.notification-success {
+  background-color: var(--success-500);
+  color: var(--app-white);
+  border-color: var(--success-500);
+}
+
+.notification-error {
+  background-color: var(--error-500);
+  color: var(--app-white);
+  border-color: var(--error-500);
+}
+
+.notification-info {
+  background-color: var(--info-500);
+  color: var(--app-white);
+  border-color: var(--info-500);
+}
+
+.button-container {
+  margin-top: var(--spacing-8);
+  display: flex;
+  gap: var(--spacing-8);
+  flex-direction: column;
+}
+
+.transparent-square-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 160px;
+  gap: var(--spacing-8);
+  background-color: #fff;
+  background-image: linear-gradient(
+      45deg,
+      var(--lb-secondary) 25%,
+      transparent 25%,
+      transparent 75%,
+      var(--lb-secondary) 75%
+    ),
+    linear-gradient(
+      45deg,
+      var(--lb-secondary) 25%,
+      transparent 25%,
+      transparent 75%,
+      var(--lb-secondary) 75%
+    );
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+  border-radius: var(--spacing-8);
+}
+
+#instruction-text {
+  font-size: var(--font-size-m);
+  font-weight: bold;
+  color: var(--db-primary);
+  text-align: center;
+  text-wrap: balance;
+}
+
+#info-container {
+  font-size: var(--font-size-m);
+  font-weight: bold;
+  color: var(--db-primary);
+  text-align: center;
+  text-wrap: balance;
+}
+
+#layer-name {
+  font-size: var(--font-size-s);
+  color: var(--background-tertiary);
+  text-align: center;
+  text-wrap: balance;
+}
+
+.spinner-container {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 8px;
+}
+
+.loading-text {
+  font-size: var(--font-size-m);
+  color: var(--db-primary);
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--background-secondary);
+  border-top: 2px solid var(--accent-primary);
+  border-radius: 50%;
+  display: inline-block;
+  animation: spin 1s linear infinite;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

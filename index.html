@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Replace Shapes</title>
+  </head>
+  <body>
+    <div>
+      <div class="button-container">
+        <div class="transparent-square-background">
+          <img id="image-preview" />
+          <span id="layer-name"></span>
+          <div id="info-container">
+            <span id="instruction-text">Cache empty</span>
+            <div id="loading-spinner" class="spinner-container hidden">
+              <span class="loading-text">Loading image</span>
+              <div class="spinner"></div>
+            </div>
+          </div>
+        </div>
+        <button
+          type="button"
+          id="copy"
+          data-appearance="primary"
+          title="Copy Shape"
+        >
+          Copy Shape
+        </button>
+        <button
+          type="button"
+          id="replace"
+          data-appearance="button"
+          title="Replace Selected"
+        >
+          Replace Selected
+        </button>
+        <button
+          type="button"
+          id="replace-and-adjust-size"
+          data-appearance="button"
+          title="Replace And Adjust Size"
+        >
+          Replace And Adjust Size
+        </button>
+        <button
+          type="button"
+          id="place-over"
+          data-appearance="button"
+          title="Place Over Selected"
+        >
+          Place Over Selected
+        </button>
+        <button
+          type="button"
+          id="place-under"
+          data-appearance="button"
+          title="Place Under Selected"
+        >
+          Place Under Selected
+        </button>
+        <button
+          type="button"
+          id="clear-cache"
+          data-appearance="button"
+          title="Clear Cache"
+        >
+          Clear Cache
+        </button>
+      </div>
+      <div id="notification-container"></div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

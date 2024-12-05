@@ -1,0 +1,13 @@
+{
+  "name": "Replace Shapes",
+  "description": "The \"Replace Shapes\" plugin replaces any selected shapes with a copied shape, essentially pasting the copied shape over the selection and removing the originals.",
+  "code": "plugin.js",
+  "icon": "/assets/replace_shapes_icon.png",
+  "permissions": [
+    "content:read",
+    "content:write",
+    "library:read",
+    "library:write",
+    "user:read"
+  ]
+}
